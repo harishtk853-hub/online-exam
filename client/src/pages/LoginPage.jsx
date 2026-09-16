@@ -229,57 +229,6 @@ export default function LoginPage() {
           </button>
         </form>
 
-        {/* Demo Quick-Login Credentials Box */}
-        <div className="bg-slate-950/90 border border-slate-800/90 rounded-2xl p-3.5 space-y-2">
-          <div className="flex items-center justify-between text-[11px] text-slate-400 font-semibold uppercase tracking-wider">
-            <span className="flex items-center gap-1.5">
-              <Info className="w-3.5 h-3.5 text-indigo-400" />
-              <span>1-Click Demo Accounts</span>
-            </span>
-            <span className="text-[10px] text-slate-500 font-normal normal-case">Pass: Password@123</span>
-          </div>
-
-          <div className="grid grid-cols-3 gap-2">
-            <button
-              type="button"
-              onClick={() => {
-                setSelectedRole('admin');
-                setEmail('admin@examify.org');
-                setPassword('Password@123');
-                setError(null);
-              }}
-              className="py-1.5 px-2 rounded-xl text-[11px] font-bold bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 transition-all text-center"
-            >
-              🛡️ Admin
-            </button>
-
-            <button
-              type="button"
-              onClick={() => {
-                setSelectedRole('teacher');
-                setEmail('teacher@examify.org');
-                setPassword('Password@123');
-                setError(null);
-              }}
-              className="py-1.5 px-2 rounded-xl text-[11px] font-bold bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-all text-center"
-            >
-              🎓 Teacher
-            </button>
-
-            <button
-              type="button"
-              onClick={() => {
-                setSelectedRole('student');
-                setEmail('student@examify.org');
-                setPassword('Password@123');
-                setError(null);
-              }}
-              className="py-1.5 px-2 rounded-xl text-[11px] font-bold bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 transition-all text-center"
-            >
-              👨‍🎓 Student
-            </button>
-          </div>
-        </div>
 
         {/* Footer Navigation */}
         <div className="pt-3 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-400">
