@@ -100,7 +100,11 @@ class UserModel {
 
         try {
             const results = await query('SELECT * FROM users WHERE email = ? LIMIT 1', [clean]);
-            return results.length ? results[0] : null;
+            if (results && results.length) {
+                return results[0];
+            }
+            const fallback = memoryUsers.find(u => u.email.toLowerCase() === clean);
+            return fallback || null;
         } catch (err) {
             const found = memoryUsers.find(u => u.email.toLowerCase() === clean);
             return found || null;
